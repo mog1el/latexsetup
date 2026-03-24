@@ -75,6 +75,20 @@ snippet enum "Enumerating" i
 $0
 endsnippet
 
+snippet citem "cItemizing" i
+\begin{citemize}
+    \item $1
+\end{citemize}
+$0
+endsnippet
+
+snippet cenum "cEnumerating" i
+\begin{cenumerate}
+    \item $1
+\end{cenumerate}
+$0
+endsnippet
+
 snippet pf "Proof" i
 \begin{proof}
     $1
@@ -96,7 +110,7 @@ snippet sum "Summation" i
 endsnippet
 
 snippet prod "Product" i
-\prod_{${1:i=1}}^{${2:n}} $0
+\product_{${1:i=1}}^{${2:n}} $0
 endsnippet
 
 snippet pder "Partial Derivative" i

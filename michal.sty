@@ -31,6 +31,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{amsmath, amssymb, amsthm, mathtools}
+\RequirePackage{enumitem}
 
 % Notation
 \newcommand{\CC}{\mathbb C}
@@ -43,6 +44,10 @@
 \newcommand{\OO}{\emptyset}
 \newcommand{\pd}{\partial}
 \newcommand{\st}{\mid}
+\newlist{cenumerate}{enumerate}{1}
+\setlist[cenumerate,1]{label=\arabic*., nosep, leftmargin=*}
+\newlist{citemize}{itemize}{1}
+\setlist[citemize,1]{label=\textbullet, nosep, leftmargin=*}
 \let\normforall\forall
 \renewcommand{\forall}{\normforall \,}
 \let\normexists\exists
@@ -141,6 +146,19 @@
 
 	\vspace*{0.5cm}
 
+\end{center}
+}}
+\DeclareOption{cheatsheet}{\renewcommand{\maketitle}{
+\pagestyle{empty}
+\thispagestyle{empty}
+\begin{center}
+	\huge
+	\textbf{\@title}
+
+	\vspace*{0.2cm}
+	\Large
+	\@author
+	\vspace*{0.2cm}
 \end{center}
 }}
 \makeatother
